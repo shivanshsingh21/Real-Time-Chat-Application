@@ -1,38 +1,27 @@
-<h1>RealTime Chat Application - LetsChat</h1>
+Node.js Chat App
+A simple demo chat app built on Node.js, Express.js and Socket.io.
 
-<ul>
-<li>It is an scalable Realtime Chatting Application that provides an interface for multiple user chatting at the same time.</li>
-<li>FrontEnd Technologies- HTML, CSS</li>
-<li>BackEnd Technologies- JavaScript, Node.js</li>
-<li>Used Socket.io module for a two-way connection between client and server.</li>
-<li>FrontEnd includes a navigation bar, Chat window and a form submit button for sending the messages.</li>
-<li>HTML has been used for preparing the structure of application.</li>
-<li>CSS has been used for styling the application.</li>
-<li>Added Client sided JavaScript for the purpose of playing with DOM elements.</li>
-<li>First of all stored all the DOM elements in a respectives JS variable.</li>
-<li>Used Audio file (ting.mp3) which gives notification on receiving the messages.</li>
-<li>Everytime a new user tries to join, first of all ask his/her name and let the server know.</li>
-<li>If a new user joins, receive the event from the server using eventListner.</li>
-<li>Receive message from server using receive function.</li>
-<li>If a user leaves the chat, tell all the other users that this user has left the chat.</li>
-<li>Server Side JavaScript will handle the Socket IO connections.</li>
-<li>If a new user joins, let the other users connected with server know.</li>
-<li>If someone sends the message, broadcast it to other people.</li>
-<li>If someone leaves the chat, let others know.</li>
-</ul>
+Demo
+https://owan-nodejs-chat-app.herokuapp.com
 
-# Process to run the app
-<ol>
-  <li> run <b>nodemon nodeserver/index.js</b>
-  <li> Install the extension 'live server' for Vs Code. Extension Id - <b>ritwickdey.liveserver </b>
-  <li> After the extension gets installed navigate to index.html and open it to edit.
-  <li> Right click anywhere in the file <b>index.html</b> and from the menu that appears select <b> Open with Live server </b>
-  <li> A instance of the application will appear in the browser. 
-  <li> Copy the url from the address bar and open another instance in another tab or in incognito or on another browser.
-</ol>
+Pre-requisites
+To setup and run the project for local development / testing, you will need to use Node.js and NPM. I don't explicitly specify a minimum Node.js/NPM version for the app but I recommend going with whatever the latest LTS version is at the point in time you are setting things up. The minimum vesion of Node.js that I have tested this app on is 10.16.3.
 
-# User 1: Mayank Chaudhary
-![Screenshot (18)](https://user-images.githubusercontent.com/49724597/87877500-56988880-c9fc-11ea-9e09-306a95deb2cb.png)
+Installers can be found here: https://nodejs.org/en/download
 
-# User 2: Harry
-![Screenshot (19)](https://user-images.githubusercontent.com/49724597/87877502-57c9b580-c9fc-11ea-9ad4-fbe7aac19a47.png)
+Another option for installing Node is the Node Version Manager (nvm), which is a POSIX-compliant bash script to manage multiple active Node.js versions. Instructions for installing and using nvm to install Node and NPM can be found at https://github.com/nvm-sh/nvm.
+
+Installation
+The code for the chat app can be found at the public GitHub repo https://github.com/owanhunte/nodejs-chat-app. Either clone the repo to a local folder on your machine or download and extract the archive if you don't have Git installed.
+
+Open a terminal window session, or the equivalent on your machine, and enter the following command to install all the Node modules needed to run the app:
+
+npm install
+Run the app in development mode
+After doing an npm install enter the following npm run command:
+
+npm run dev
+This will start the app and set it up to listen for incoming connections on port 3000. Open up your browser of choice and go to the url http://localhost:3000/ to start using the app itself. The npm run dev command automatically runs the app using the nodemon script so any changes you make to the app's javascript, CSS or HTML code will automatically restart it.
+
+Customizing the listening port
+To configure the port that the app listens on at startup, copy the file .env.example, located at the root of the project, to .env and set an appropriate value for the PORT environment variable listed in the file. This must be done before the app is started.
